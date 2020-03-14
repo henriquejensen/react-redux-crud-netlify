@@ -20,7 +20,7 @@ export default function ContactsList() {
     <Card>
       <CardHeader>
         <Title data-test={`total-${totalDeCotnatos}`}>
-          Contatos({totalDeCotnatos})
+          Meus Contatos({totalDeCotnatos})
         </Title>
         <Link to="/create" as="button" data-test="novo-contato">
           <Button>Adicionar contato</Button>
