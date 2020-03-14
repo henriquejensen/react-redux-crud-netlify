@@ -6,6 +6,12 @@ import Title from "components/Title";
 import { Button } from "components/Button";
 import ContactRow from "components/ContactRow";
 import NoContacts from "components/NoContacts";
+import styled from "styled-components";
+
+const Number = styled.span`
+  font-size: 12px;
+  padding-left: 5px;
+`;
 
 export default function ContactsList() {
   const dispatch = useDispatch();
@@ -20,7 +26,7 @@ export default function ContactsList() {
     <Card>
       <CardHeader>
         <Title data-test={`total-${totalDeCotnatos}`}>
-          Meus Contatos({totalDeCotnatos})
+          Contatos: <Number>({totalDeCotnatos})</Number>
         </Title>
         <Link to="/create" as="button" data-test="novo-contato">
           <Button>Adicionar contato</Button>
